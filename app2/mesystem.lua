@@ -2,7 +2,6 @@
  
 intIdMainComputer = 2 -- Die ID des Empfangenden Main Computers
 intIdTablet = 4 -- Die ID des Empfangenden Tablets
-intIdApp2Computer = 3 -- Umbauen auf eigene ID abfrage
  
 p=peripheral.wrap("left") --Angeben an welcher Seite der Block angeschlossen ist
 rednet.open("back") --Aktieviert das Modem das hinten angeschlossen ist

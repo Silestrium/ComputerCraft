@@ -2,7 +2,6 @@
 
 intIdMainComputer = 2 -- Die ID des Empfangenden Main Computers
 intIdTablet = 4 -- Die ID des Empfangenden Tablets
-intIdTank1Computer = 5  -- umbauen auf eigene ID abfrage
 
 p_left=peripheral.wrap("left") --Angeben an welcher Seite der Block angeschlossen ist
 p_right=peripheral.wrap("right") --Angeben an welcher Seite der Block angeschlossen ist
@@ -18,8 +17,8 @@ while true do --Always loop
  
     sendmessage = {KeyLeftTankCap = leftTankCap , KeyLeftTankStored = leftTankStored , KeyLeftTankFillPercent = leftTankFilledPercent }
     
-    rednet.send(intIdMainComputer,sendmessage,intIdTank1Computer)
-    rednet.send(intIdTablet,sendmessage,intIdTank1Computer)
+    rednet.send(intIdMainComputer,sendmessage,"Tank1")
+    rednet.send(intIdTablet,sendmessage,"Tank1")
  
     sleep(20)
  

@@ -21,18 +21,22 @@ while true do --Always loop
     MessageID,message = rednet.receive()
  
 -- print(MessageID)
+    if MessageID == intIdApp2Computer then
         itemsUsed = message["KeyItemsUsed"]
         itemsMax = message["KeyItemsMax"]
         fluidsUsed = message["KeyFluidUsed"]
         fluidsMax = message["KeyFluidMax"]
+    end
  
 if MessageID == intIdApp2Computer then -- APP2 Receive
     if IntID == intIDAusgabePC then -- Ausgabe auf PC
         
         
         term.redirect(monitor)
+        print("Me System Status:")
         print("Items", itemsUsed , " / " , itemsMax)
         print("Fluids:",  fluidsUsed , "/" , fluidsMax)
+        print("Mekanism Tanks:")
         -- All the prints you want here
         -- term.restore()
  

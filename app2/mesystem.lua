@@ -2,6 +2,7 @@
  
 intIdMainComputer = 2 -- Die ID des Empfangenden Main Computers
 intIdTablet = 4 -- Die ID des Empfangenden Tablets
+intIdApp2Computer = 3 -- Umbauen auf eigene ID abfrage
  
 p=peripheral.wrap("left") --Angeben an welcher Seite der Block angeschlossen ist
 rednet.open("back") --Aktieviert das Modem das hinten angeschlossen ist
@@ -16,8 +17,8 @@ while true do --Always loop
  
     sendmessage = {KeyItemsMax = intMaxItemStorage , KeyItemsUsed = intUsedItemStorage , KeyFluidMax = intMaxFluidStorage , KeyFluidUsed = intUsedFluidStorage }
     
-    rednet.send(intIdMainComputer,sendmessage)
-    rednet.send(intIdTablet,sendmessage)
+    rednet.send(intIdMainComputer,sendmessage,intIdApp2Computer)
+    rednet.send(intIdTablet,sendmessage,intIdApp2Computer)
  
     sleep(20)
  

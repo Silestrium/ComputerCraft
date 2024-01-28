@@ -25,7 +25,7 @@ while true do --Always loop
 -- print(MessageID)
     if protokol == "MeSystem" then
 
-        itemsUsed = messmessage_app2age["KeyItemsUsed"]
+        itemsUsed = message_app2["KeyItemsUsed"]
         itemsMax = message_app2["KeyItemsMax"]
         fluidsUsed = message_app2["KeyFluidUsed"]
         fluidsMax = message_app2["KeyFluidMax"]
@@ -56,8 +56,8 @@ while true do --Always loop
  
     if IntID == intIDAusgabeTablet then -- Ausgabe auf Tablet
  
-        print("Items:",  message["KeyItemsUsed"], "/", message["KeyItemsMax"])
-        print("Fluids:",  message["KeyFluidUsed"], "/", message["KeyFluidMax"])
+        print("Items:",  message_app2["KeyItemsUsed"], "/", message_app2["KeyItemsMax"])
+        print("Fluids:",  message_app2["KeyFluidUsed"], "/", message_app2["KeyFluidMax"])
  
     end
 --end

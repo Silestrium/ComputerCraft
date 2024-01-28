@@ -5,5 +5,7 @@ p_right=peripheral.wrap("right") --Angeben an welcher Seite der Block angeschlos
 rednet.open("back") --Aktieviert das Modem das hinten angeschlossen ist
 
 leftTankCap = p_left.getTankCapacity()
+leftTankStored = p_left.getStored()
+leftTankFilledPercent = p_left.getFilledPercentage()
 
-print(leftTankCap)
+print(leftTankCap , "Filled" , leftTankFilledPercent , "%")

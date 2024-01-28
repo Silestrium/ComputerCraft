@@ -8,6 +8,7 @@ local monitor = peripheral.wrap( "top" )
 IntID = os.getComputerID()
  
 intIdApp2Computer = 3 -- Die ID des Sendenden APP2 Computer
+intIdTank1Computer = 5  -- Die ID des Sendenden Tank1 Computer
  
 if IntID == intIDAusgabePC then
 rednet.open(varModemPC) --Aktieviert das Modem das hinten angeschlossen ist

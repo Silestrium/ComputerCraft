@@ -61,6 +61,7 @@ while true do --Always loop
     end
 --end
  
- 
+
+sleep(30)
  
 end

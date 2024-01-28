@@ -23,13 +23,21 @@ while true do --Always loop
  
 -- print(MessageID)
     if MessageID == intIdApp2Computer then
+
         itemsUsed = message["KeyItemsUsed"]
         itemsMax = message["KeyItemsMax"]
         fluidsUsed = message["KeyFluidUsed"]
         fluidsMax = message["KeyFluidMax"]
+    
+    elseif MessageID == intIdTank1Computer then
+        
+        leftTankCap = message["KeyLeftTankCap"]
+        leftTankStored = message["KeyLeftTankStored"]
+        leftTankFilledPercent = message["KeyLeftTankFillPercent"]
+
     end
  
-if MessageID == intIdApp2Computer then -- APP2 Receive
+--if MessageID == intIdApp2Computer then -- APP2 Receive
     if IntID == intIDAusgabePC then -- Ausgabe auf PC
         
         
@@ -38,6 +46,7 @@ if MessageID == intIdApp2Computer then -- APP2 Receive
         print("Items", itemsUsed , " / " , itemsMax)
         print("Fluids:",  fluidsUsed , "/" , fluidsMax)
         print("Mekanism Tanks:")
+        print("Left Tank Stored:", leftTankStored, leftTankFilledPercent, "%")
         -- All the prints you want here
         -- term.restore()
  
@@ -50,7 +59,7 @@ if MessageID == intIdApp2Computer then -- APP2 Receive
         print("Fluids:",  message["KeyFluidUsed"], "/", message["KeyFluidMax"])
  
     end
-end
+--end
  
  
  

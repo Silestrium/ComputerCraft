@@ -8,6 +8,8 @@ p_right=peripheral.wrap("right") --Angeben an welcher Seite der Block angeschlos
 rednet.open("back") --Aktieviert das Modem das hinten angeschlossen ist
 
 while true do --Always loop
+
+    rednet.host("tank1","Tank1")
  
     leftTankCap = p_left.getTankCapacity()
     leftTankStored = p_left.getStored()

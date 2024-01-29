@@ -8,7 +8,7 @@ while true do
     file = fs.open("mesystem.txt","r")
     itemsUsed = file.readLine()
 
-    local file = fs.open('your/file/path')
+    local file = fs.open("mesystem.txt","r")
     local data = fs.readAll()
     file.close()
     

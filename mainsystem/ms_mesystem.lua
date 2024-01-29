@@ -36,10 +36,10 @@ end
   
       print("Tick")
       file = fs.open("mesystem.txt", "w")
-      file.write(itemsUsed, "\n")
-      file.write(itemsMax, "\n")
-      file.write(fluidsUsed, "\n")
-      file.write(fluidsMax)
+      file.writeLine(itemsUsed)
+      file.writeLine(itemsMax)
+      file.writeLine(fluidsUsed)
+      file.writeLine(fluidsMax)
       file.close()
 
       sleep(20)

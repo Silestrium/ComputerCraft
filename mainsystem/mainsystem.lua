@@ -17,7 +17,6 @@ elseif intID == intIDAusgabeTablet then
 rednet.open("Top") --Aktieviert das Modem das hinten angeschlossen ist
 end
 
-rednet.run()
 rednet.lookup("mesystem","MeSystem")
 rednet.lookup("tank1","Tank1")
  

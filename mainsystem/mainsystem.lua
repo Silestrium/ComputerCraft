@@ -19,8 +19,8 @@ end
  
 while true do --Always loop
 
-    rednet.lookup("mesystem",intIdApp2Computer)
-    rednet.lookup("tank1",intIdTank1Computer)
+    rednet.lookup("mesystem","MeSystem")
+    rednet.lookup("tank1","Tank1")
 
     MessageID,message_mesystem = rednet.receive("mesystem",20)
     MessageID,message_tank1 = rednet.receive("tank1",20)

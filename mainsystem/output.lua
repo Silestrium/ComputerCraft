@@ -1,4 +1,5 @@
 intIDAusgabePC = 2
+IntID = os.getComputerID()
 
 local monitor = peripheral.wrap( "top" )
 

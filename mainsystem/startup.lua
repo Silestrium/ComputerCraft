@@ -1,3 +1,5 @@
 shell.run("delete mainsystem.lua")
+shell.run("delete ms_mesystem.lua")
 shell.run("wget https://raw.githubusercontent.com/Silestrium/ComputerCraft/main/mainsystem/mainsystem.lua mainsystem.lua")
+shell.run("wget https://raw.githubusercontent.com/Silestrium/ComputerCraft/main/mainsystem/ms_mesystem.lua ms_mesystem.lua")
 shell.run("mainsystem.lua")

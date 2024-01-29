@@ -35,7 +35,6 @@ end
       print("Tick")
       file = fs.open("mesystem.txt", "w")
       file.writeline(itemsUsed)
-      --file.writeline(itemsMax)
       file.close()
 
       sleep(20)

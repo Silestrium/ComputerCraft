@@ -22,8 +22,6 @@ rednet.lookup("mesystem","MeSystem")
 if fs.exists("mesystem.txt") == false then
     fs.makeDir("mesystem.txt")
 end
-
-fs.open("mesystem.txt", "w")
  
 while true do --Always loop
 
@@ -33,6 +31,11 @@ while true do --Always loop
     itemsMax = message_mesystem["KeyItemsMax"]
     fluidsUsed = message_mesystem["KeyFluidUsed"]
     fluidsMax = message_mesystem["KeyFluidMax"]
+
+    print("Tick")
+    file = fs.open("mesystem.txt", "w")
+    file.write(message_mesystem)
+    file.close()
 
  
 

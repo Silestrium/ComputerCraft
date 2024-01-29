@@ -23,11 +23,11 @@ if fs.exists("mesystem.txt") == false then
     fs.makeDir("mesystem.txt")
 end
 
-local function background()
+local function main()
     while true do
       -- whatever background task needs to run.
 
-      MessageID,message_mesystem = rednet.receive("mesystem",40)
+      MessageID,message_mesystem = rednet.receive("mesystem",30)
 
       itemsUsed = message_mesystem["KeyItemsUsed"]
       itemsMax = message_mesystem["KeyItemsMax"]
@@ -39,6 +39,6 @@ local function background()
       file.write(itemsUsed)
       file.close()
 
-      sleep(1)
+      sleep(20)
     end
   end

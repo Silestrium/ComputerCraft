@@ -16,11 +16,12 @@ rednet.open(varModemPC) --Aktieviert das Modem das hinten angeschlossen ist
 elseif intID == intIDAusgabeTablet then
 rednet.open("Top") --Aktieviert das Modem das hinten angeschlossen ist
 end
+
+rednet.run()
+rednet.lookup("mesystem","MeSystem")
+rednet.lookup("tank1","Tank1")
  
 while true do --Always loop
-
-    rednet.lookup("mesystem","MeSystem")
-    rednet.lookup("tank1","Tank1")
 
     MessageID,message_mesystem = rednet.receive("mesystem",20)
     MessageID,message_tank1 = rednet.receive("tank1",20)
@@ -59,8 +60,8 @@ while true do --Always loop
  
     if IntID == intIDAusgabeTablet then -- Ausgabe auf Tablet
  
-        print("Items:",  message_mesystem["KeyItemsUsed"], "/", message_mesystem["KeyItemsMax"])
-        print("Fluids:",  message_mesystem["KeyFluidUsed"], "/", message_mesystem["KeyFluidMax"])
+        print("Items", itemsUsed , " / " , itemsMax)
+        print("Fluids:",  fluidsUsed , "/" , fluidsMax
  
     end
 --end

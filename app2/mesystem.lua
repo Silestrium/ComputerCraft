@@ -6,9 +6,9 @@ intIdTablet = 4 -- Die ID des Empfangenden Tablets
 p=peripheral.wrap("left") --Angeben an welcher Seite der Block angeschlossen ist
 rednet.open("back") --Aktieviert das Modem das hinten angeschlossen ist
  
-while true do --Always loop
+rednet.host("mesystem","MeSystem")
 
-    rednet.host("mesystem","MeSystem")
+while true do --Always loop
  
     intMaxFluidStorage = p.getAvailableFluidStorage() -- Gibt aus wie viel Fluid Storage im ME System ist
     intUsedFluidStorage = p.getUsedFluidStorage() --Gibt aus wie viel Platz des Fluid Storage verbraucht ist

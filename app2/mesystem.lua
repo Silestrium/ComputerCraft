@@ -16,8 +16,8 @@ while true do --Always loop
  
     sendmessage = {KeyItemsMax = intMaxItemStorage , KeyItemsUsed = intUsedItemStorage , KeyFluidMax = intMaxFluidStorage , KeyFluidUsed = intUsedFluidStorage }
     
-    rednet.send(intIdMainComputer,sendmessage)
-    rednet.send(intIdTablet,sendmessage)
+    rednet.send(intIdMainComputer,sendmessage,app2)
+    rednet.send(intIdTablet,sendmessage,app2)
  
     sleep(20)
  

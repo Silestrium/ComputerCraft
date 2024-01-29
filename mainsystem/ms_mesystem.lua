@@ -18,6 +18,12 @@ rednet.open("Top") --Aktieviert das Modem das hinten angeschlossen ist
 end
 
 rednet.lookup("mesystem","MeSystem")
+
+if fs.exists("mesystem.txt") == false then
+    fs.makeDir("mesystem.txt")
+end
+
+fs.open("mesystem.txt", "w")
  
 while true do --Always loop
 
@@ -28,9 +34,6 @@ while true do --Always loop
     fluidsUsed = message_mesystem["KeyFluidUsed"]
     fluidsMax = message_mesystem["KeyFluidMax"]
 
-    fs.exists("mesystem.txt")
-    fs.open("mesystem.txt", "w")
- 
  
 
 --sleep(30)

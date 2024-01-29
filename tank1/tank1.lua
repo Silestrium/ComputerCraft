@@ -17,8 +17,8 @@ while true do --Always loop
  
     sendmessage = {KeyLeftTankCap = leftTankCap , KeyLeftTankStored = leftTankStored , KeyLeftTankFillPercent = leftTankFilledPercent }
     
-    rednet.send(intIdMainComputer,sendmessage,tank1)
-    rednet.send(intIdTablet,sendmessage,tank1)
+    rednet.send(intIdMainComputer,sendmessage,"tank1")
+    rednet.send(intIdTablet,sendmessage,"tank1")
  
     sleep(20)
  

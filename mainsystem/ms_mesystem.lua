@@ -31,6 +31,8 @@ end
       itemsMax = message_mesystem["KeyItemsMax"]
       fluidsUsed = message_mesystem["KeyFluidUsed"]
       fluidsMax = message_mesystem["KeyFluidMax"]
+
+      print(itemsUsed)
   
       print("Tick")
       file = fs.open("mesystem.txt", "w")

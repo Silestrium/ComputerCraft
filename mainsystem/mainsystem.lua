@@ -19,16 +19,16 @@ end
  
 while true do --Always loop
 
-    MessageID,message_app2 = rednet.receive("mesystem",20)
+    MessageID,message_mesystem = rednet.receive("mesystem",20)
     MessageID,message_tank1 = rednet.receive("tank1",20)
  
 -- print(MessageID)
     if MessageID == intIdApp2Computer then
 
-        itemsUsed = message_app2["KeyItemsUsed"]
-        itemsMax = message_app2["KeyItemsMax"]
-        fluidsUsed = message_app2["KeyFluidUsed"]
-        fluidsMax = message_app2["KeyFluidMax"]
+        itemsUsed = message_mesystem["KeyItemsUsed"]
+        itemsMax = message_mesystem["KeyItemsMax"]
+        fluidsUsed = message_mesystem["KeyFluidUsed"]
+        fluidsMax = message_mesystem["KeyFluidMax"]
     
     elseif MessageID == intIdTank1Computer then
         
@@ -56,8 +56,8 @@ while true do --Always loop
  
     if IntID == intIDAusgabeTablet then -- Ausgabe auf Tablet
  
-        print("Items:",  message_app2["KeyItemsUsed"], "/", message_app2["KeyItemsMax"])
-        print("Fluids:",  message_app2["KeyFluidUsed"], "/", message_app2["KeyFluidMax"])
+        print("Items:",  message_mesystem["KeyItemsUsed"], "/", message_mesystem["KeyItemsMax"])
+        print("Fluids:",  message_mesystem["KeyFluidUsed"], "/", message_mesystem["KeyFluidMax"])
  
     end
 --end

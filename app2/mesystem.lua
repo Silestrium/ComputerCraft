@@ -16,7 +16,12 @@ while true do --Always loop
  
     print(intMaxFluidStorage, intUsedFluidStorage, intMaxItemStorage, intUsedItemStorage)
 
-    sendmessage = {KeyItemsMax = intMaxItemStorage , KeyItemsUsed = intUsedItemStorage , KeyFluidMax = intMaxFluidStorage , KeyFluidUsed = intUsedFluidStorage }
+    --sendmessage = {KeyItemsMax = intMaxItemStorage , KeyItemsUsed = intUsedItemStorage , KeyFluidMax = intMaxFluidStorage , KeyFluidUsed = intUsedFluidStorage }
+    
+    --rednet.send(intIdMainComputer,sendmessage,"mesystem")
+    --rednet.send(intIdTablet,sendmessage,"mesystem")
+
+    sendmessage = {KeyItemsMax = intMaxItemStorage , KeyItemsUsed = intUsedItemStorage , KeyFluidMax = intMaxFluidStorage }
     
     rednet.send(intIdMainComputer,sendmessage,"mesystem")
     rednet.send(intIdTablet,sendmessage,"mesystem")

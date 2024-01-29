@@ -40,7 +40,11 @@ while true do --Always loop
     
     --elseif MessageID == intIdTank1Computer then
         
-        leftTankCap = message_tank1["KeyLeftTankCap"]
+        if message_tank1["KeyLeftTankCap"] == "" then
+             leftTankCap = 0
+        else
+             leftTankCap = message_tank1["KeyLeftTankCap"]
+        end
         leftTankStored = message_tank1["KeyLeftTankStored"]
         leftTankFilledPercent = message_tank1["KeyLeftTankFillPercent"]
 

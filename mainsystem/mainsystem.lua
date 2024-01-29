@@ -19,8 +19,8 @@ end
  
 while true do --Always loop
 
-    MessageID,message_app2 = rednet.receive("app2",2)
-    MessageID,message_tank1 = rednet.receive("tank1",2)
+    MessageID,message_app2 = rednet.receive("app2",20)
+    MessageID,message_tank1 = rednet.receive("tank1",20)
  
 -- print(MessageID)
     if MessageID == intIdApp2Computer then
@@ -63,6 +63,6 @@ while true do --Always loop
 --end
  
 
-sleep(30)
+--sleep(30)
  
 end

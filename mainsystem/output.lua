@@ -3,11 +3,11 @@ IntID = os.getComputerID()
 
 local monitor = peripheral.wrap( "top" )
 
-file = fs.open("mesystem.txt","r")
-itemsUsed = file.readLine()
-file.close()
-
 while true do
+
+    file = fs.open("mesystem.txt","r")
+    itemsUsed = file.readLine()
+    file.close()
 
     if IntID == intIDAusgabePC then -- Ausgabe auf PC
             

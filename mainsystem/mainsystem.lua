@@ -57,7 +57,6 @@ while true do --Always loop
  
     end
  
- -
     if IntID == intIDAusgabeTablet then -- Ausgabe auf Tablet
  
         print("Items", itemsUsed , " / " , itemsMax)

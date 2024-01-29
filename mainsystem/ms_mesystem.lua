@@ -33,8 +33,11 @@ end
       fluidsMax = message_mesystem["KeyFluidMax"]
   
       print("Tick")
+      y = 1
       file = fs.open("mesystem.txt", "w")
-      file.write(itemsUsed)
+      file.writeline(itemsUsed)
+      file.setCursorPos(1, y + 1)
+      file.writeline(itemsMax)
       file.close()
 
       sleep(20)

@@ -19,36 +19,24 @@ end
  
 while true do --Always loop
 
-    MessageID,message = rednet.receive()
+    MessageID,message_app2 = rednet.receive(app2,0)
+    MessageID,message_tank1 = rednet.receive(tank1,0)
  
-    if MessageID == intIdApp2Computer then
-        MessageID = MessageID
-        message_app2 = message
-  
-    elseif MessageID == intIdTank1Computer then
-        MessageID = MessageID
-        message_tank1 = message
-  
-    end
 -- print(MessageID)
-    --if MessageID == intIdApp2Computer then
+    if MessageID == intIdApp2Computer then
 
         itemsUsed = message_app2["KeyItemsUsed"]
         itemsMax = message_app2["KeyItemsMax"]
         fluidsUsed = message_app2["KeyFluidUsed"]
         fluidsMax = message_app2["KeyFluidMax"]
     
-    --elseif MessageID == intIdTank1Computer then
+    elseif MessageID == intIdTank1Computer then
         
-        if message_tank1["KeyLeftTankCap"] == "" then
-             leftTankCap = 0
-        else
-             leftTankCap = message_tank1["KeyLeftTankCap"]
-        end
+        leftTankCap = message_tank1["KeyLeftTankCap"]
         leftTankStored = message_tank1["KeyLeftTankStored"]
         leftTankFilledPercent = message_tank1["KeyLeftTankFillPercent"]
 
-    --end
+    end
  
 --if MessageID == intIdApp2Computer then -- APP2 Receive
     if IntID == intIDAusgabePC then -- Ausgabe auf PC

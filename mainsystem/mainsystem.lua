@@ -18,10 +18,18 @@ rednet.open("Top") --Aktieviert das Modem das hinten angeschlossen ist
 end
  
 while true do --Always loop
+
+    MessageID,message = rednet.receive()
  
-    MessageID,message_app2 = rednet.receive()
-    MessageID,message_tank1 = rednet.receive()
- 
+    if MessageID == intIdApp2Computer then
+        MessageID = MessageID
+        message_app2 = message
+  
+    elseif MessageID == intIdTank1Computer then
+        MessageID = MessageID
+        message_tank1 = message
+  
+    end
 -- print(MessageID)
     --if MessageID == intIdApp2Computer then
 

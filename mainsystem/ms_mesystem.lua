@@ -22,21 +22,23 @@ rednet.lookup("mesystem","MeSystem")
 if fs.exists("mesystem.txt") == false then
     fs.makeDir("mesystem.txt")
 end
- 
-while true do --Always loop
 
-    MessageID,message_mesystem = rednet.receive("mesystem",40)
+local function background()
+    while true do
+      -- whatever background task needs to run.
 
-    itemsUsed = message_mesystem["KeyItemsUsed"]
-    itemsMax = message_mesystem["KeyItemsMax"]
-    fluidsUsed = message_mesystem["KeyFluidUsed"]
-    fluidsMax = message_mesystem["KeyFluidMax"]
+      MessageID,message_mesystem = rednet.receive("mesystem",40)
 
-    print("Tick")
-    file = fs.open("mesystem.txt", "w")
-    file.write(itemsUsed)
-    file.close()
+      itemsUsed = message_mesystem["KeyItemsUsed"]
+      itemsMax = message_mesystem["KeyItemsMax"]
+      fluidsUsed = message_mesystem["KeyFluidUsed"]
+      fluidsMax = message_mesystem["KeyFluidMax"]
+  
+      print("Tick")
+      file = fs.open("mesystem.txt", "w")
+      file.write(itemsUsed)
+      file.close()
 
---sleep(30)
- 
-end
+      sleep(1)
+    end
+  end

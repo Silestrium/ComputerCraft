@@ -25,7 +25,7 @@ end
  
 while true do --Always loop
 
-    MessageID,message_mesystem = rednet.receive("mesystem",20)
+    MessageID,message_mesystem = rednet.receive("mesystem",40)
 
     itemsUsed = message_mesystem["KeyItemsUsed"]
     itemsMax = message_mesystem["KeyItemsMax"]
@@ -34,10 +34,8 @@ while true do --Always loop
 
     print("Tick")
     file = fs.open("mesystem.txt", "w")
-    file.write(message_mesystem)
+    file.write(itemsUsed)
     file.close()
-
- 
 
 --sleep(30)
  

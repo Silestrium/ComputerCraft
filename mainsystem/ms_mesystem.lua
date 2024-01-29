@@ -23,9 +23,7 @@ if fs.exists("mesystem.txt") == false then
     fs.makeDir("mesystem.txt")
 end
 
-local function main()
     while true do
-      -- whatever background task needs to run.
 
       MessageID,message_mesystem = rednet.receive("mesystem",30)
 
@@ -41,4 +39,3 @@ local function main()
 
       sleep(20)
     end
-  end

@@ -14,6 +14,8 @@ while true do --Always loop
     intMaxItemStorage = p.getAvailableItemStorage() -- Gibt aus wie viel Item Storage im ME System ist
     intUsedItemStorage = p.getUsedItemStorage() --Gibt aus wie viel Platz des Item Storage verbraucht ist
  
+    print(intMaxFluidStorage, intUsedFluidStorage, intMaxItemStorage, intUsedItemStorage)
+
     sendmessage = {KeyItemsMax = intMaxItemStorage , KeyItemsUsed = intUsedItemStorage , KeyFluidMax = intMaxFluidStorage , KeyFluidUsed = intUsedFluidStorage }
     
     rednet.send(intIdMainComputer,sendmessage,"mesystem")

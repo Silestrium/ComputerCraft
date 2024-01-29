@@ -19,7 +19,7 @@ end
  
 while true do --Always loop
 
-    MessageID,message_app2 = rednet.receive("app2",20)
+    MessageID,message_app2 = rednet.receive("mesystem",20)
     MessageID,message_tank1 = rednet.receive("tank1",20)
  
 -- print(MessageID)

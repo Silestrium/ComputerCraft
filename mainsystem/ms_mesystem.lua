@@ -34,7 +34,7 @@ end
   
       print("Tick")
       file = fs.open("mesystem.txt", "w")
-      file.writeline("xyz")
+      file.write(itemsUsed)
       file.close()
 
       sleep(20)
